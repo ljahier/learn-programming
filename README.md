@@ -46,5 +46,17 @@ For start, you can learn all step write in this document (The Readme File).
  ```
  let server = http.createServer((req, res) {
    res.end("Hello World!");
- })```
- We declare a variable with the name "server", and we attribute a in a value, a http function createServer(). We add http dot before to indicate at Node JS in what library he can search this function. This function get in parameter a function. This function get 2 parameters, req and res. Req is a request send to server and res is server response to user.   
+ })
+ ```
+
+ We declare a variable with the name "server", and we attribute a in a value, a http function createServer(). We add http dot before to indicate at Node JS in what library he can search this function. This function get in parameter a function. This arrow function get 2 parameters, req and res. Req is a request send to server and res is server response to user. The function ``` res.end ``` use the second parameter "RES" - for response - and function ``` end() ``` to send text to user.
+
+ We finished by
+ ```
+ server.listen(3000, () => {
+   console.log("Server listen on http://localhost:3000");
+ });
+ ```
+ We reuse the "server" variable with the function ``` listen() ``` were take 2 parameters. The first is	obligatory and the second optional, the first is the port on which you want your server was start and the second is arrow function with ``` console.log("Server listen on http://localhost:3000") ``` for print in console a message "Server listen on http://localhost:3000".
+
+ Now you can start your server with Node JS. For do this, you can open terminal and go to you project folder. You can use "cd" command to move in your files with the terminal. Go [Google](https://google.com/) for search how to use it. When you are in the good folder, you can execute a command to launch your program. Write ```node server.js ``` and the message "Server listen on http://localhost:3000" is normaly print in your console and if you open your favority browser, you can go to http://localhost:3000 and you have "Hello World!" in your page.
